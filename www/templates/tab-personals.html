@@ -1,0 +1,210 @@
+<ion-view hide-nav-bar="true"  ><!--hide-tabs="true"  模板底部消失-->
+
+	<ion-header-bar  style="background: black;">
+					
+					<h1 class="title"></h1>	
+					<p class="button button-clear icon ion-ios-gear" style=" color: #fff; float: right;"></p>
+	</ion-header-bar>
+		
+	<ion-content  style="background:gainsboro;">
+			<!--头部-->
+	<!--<div style="background: red;">
+		<p class="button button-clear icon ion-ios-gear" style=" color: #fff; float: right;"></p>
+	</div>
+<div style="height: 1.1rem;background: black;"></div>-->
+	<!--头像部分-->
+	<div style="text-align: center; width: 100%; height: 40%;background: black;padding: 1rem 0 0 0; ">
+			<img style="width: 1.8rem; height: 1.8rem; border-radius: 50%;border: 0.04rem solid gray;" src="img/five/touxiang.jpg" />
+		<div style="height: 0.2rem;"></div>
+		<p style="color: white;">下个ID见、</p>
+		
+		<div class="row" style="background: ; opacity: 0.2;height: 1.8rem; text-align: center; color: white;">
+			<div class="col col-33">
+				<span>0</span>
+				<p>商品收藏</p>
+			</div>
+			<div class="col col-33">
+				<span>0</span>
+				<p>品牌收藏</p>
+			</div>
+			<div class="col col-33">
+				<span>0</span>
+				<p>文章收藏</p>
+			</div>
+		</div>
+	</div>
+	<!--<div style="background: gray;">-->
+		<!--我的订单-->
+		<a class="item" ng-click="openModal()">
+			<span style="float: left;white-space: pre;"> 我的订单</span>
+			<span style="float: right;white-space: pre;">查看全部订单 <span style="color: gainsboro;">></span> </span>
+		</a>
+		<!--付款-->
+		<div class="row" style="background: white;">
+			<div class="col col-33">
+				 <a class="tab-item">
+				    <i class="icon ion-ios-filing"></i>
+				    代付款
+				  </a>
+			</div>  
+			<div class="col col-33">
+				 <a class="tab-item">
+				    <i class="icon ion-ios-box"></i>
+				    进行中
+				  </a>
+			</div>
+			<div class="col col-33">
+				<a class="tab-item">
+				    <i class="icon ion-document-text"></i>
+				    待评价
+				  </a>
+			</div>
+		</div>
+		<!--<div ui-view></div>-->
+		<div style="height: 0.2rem;"></div>
+		<a class="item "  style="">
+			<span style="float: left;white-space: pre;">我的优惠券</span>
+			<span style="float: right;white-space: pre;color: gainsboro;">> </span>
+		</a>
+		<a class="item "  style=""  ng-click="openmyInfor()">
+			<span style="float: left;white-space: pre;">收货信息管理</span>
+			<span style="float: right;white-space: pre;color: gainsboro;">> </span>
+		</a>
+		<a class="item "  style="" ng-click="openmyIdentity()">
+			<span style="float: left;white-space: pre;">身份信息管理</span>
+			<span style="float: right;white-space: pre;color: gainsboro;">> </span>
+		</a>
+		<div style="height: 0.2rem;"></div>
+		<a class="item "  style="">
+			<span style="float: left;white-space: pre;">搭配客服</span>
+			<span style="float: right;white-space: pre;color: gainsboro;">> </span>
+		</a>
+		<a class="item " style="">
+			<span style="float: left;white-space: pre;">帮助与反馈</span>
+			<span style="float: right;white-space: pre;color: gainsboro;">> </span>
+		</a>
+		<div style="height: 0.2rem;"></div>
+		<a class="item " style="">
+			<span style="float: left;white-space: pre;"> 邀请好友</span>
+			<span style="float: right;white-space: pre;color: gainsboro;">> </span>
+		</a>
+		<div style="height: 0.2rem;"></div>
+		
+<!--	</div>-->	
+	</ion-content>
+	
+	
+	<!--我的订单模态-->
+	<script id="myIndent.html" type="text/ng-template" >
+		<ion-modal-view>
+			<ion-header-bar class="bar-dark">
+							<P  ng-click="closeModal()" class="button button-clear" >&nbsp;&nbsp; < &nbsp;&nbsp;&nbsp;&nbsp; 我的订单</P>
+							
+			</ion-header-bar>
+			<ion-content>
+				<ul id="dingdanUl">
+					<li style="border-bottom: 1.5px solid black;">全部</li>
+					<li>待付款</li>
+					<li>进行中</li>
+					<li>待评价</li>
+				</ul>
+				<ul id="dingdanNr">
+					<li>
+						<img src="img/five/dingdan.png" style="width: 10.8rem; height: 17rem;"/>
+					</li>
+					<li>
+						<img src="img/five/dingdan.png" style="width: 10.8rem; height: 17rem;"/>
+					</li>
+					<li>
+						<img src="img/five/dingdan.png" style="width: 10.8rem; height: 17rem;"/>
+					</li>
+					<li>
+						<img src="img/five/dingdan.png" style="width: 10.8rem; height: 17rem;"/>
+					</li>
+				</ul>
+				
+			</ion-content>
+		</ion-modal-view>	
+	</script>
+	
+	<!--收货地址模态-->
+	<script id="myInformation.html" type="text/ng-template" charset="utf-8"   >
+		<ion-modal-view>
+			<ion-header-bar class="bar-dark" >
+				<P  ng-click="closemyInfor()" class="button button-clear" style="white-space: pre;" >    <      收货信息管理</P>
+				<h1 class="title" ></h1>
+				<a ng-click="openmyInfors()" class="button button-clear ion-ios-plus-empty"  style="color: white; white-space: pre;"  ng-click="openmyInfors()">   </a>
+			</ion-header-bar>
+			<ion-content>
+				<ion-list >
+					<img src="img/five/shouhuo.png" style="width: 100%;height: 100%;"/>
+				</ion-list>
+				<ion-list>	
+				</ion-list>
+			</ion-content>
+			
+		</ion-modal-view>	
+	</script>
+	<!--收货地址具体信息保存-->
+	<script id="myInformations.html" type="text/ng-template" charset="utf-8" >
+		<ion-modal-view>
+			<ion-header-bar class="bar-dark" >
+				<P  ng-click="closemyInfors()" class="button button-clear" style="white-space: pre;" >    <      收货人地址</P>
+				<h1 class="title" ></h1>
+				<a ng-click="openmysite()" class="button button-clear"  style="color: white; white-space: pre;"  ng-click="openmyInfors()">保存</a>
+			</ion-header-bar>
+			<ion-content style="background: gainsboro;">
+				<div class="list">
+				  <label class="item item-input">
+				    <span class="input-label">收货人</span>
+				    <input type="text">
+				  </label>
+				  <label class="item item-input">
+				    <span class="input-label">联系人电话</span>
+				    <input type="text">
+				  </label>
+				  <div style="width: 100%; height: 0.2rem;"></div>
+				  	<a class="item" ng-click="openmyLocations()">
+						<span  style="float: left;white-space: pre;"> 所在地区</span>
+						<span style="float: right;white-space: pre;">选择省份,市县，区域 <span style="color: gainsboro;">></span> </span>
+					</a>
+				    <label class="item item-input item-floating-label" style="background: white;width: 100%; height: 3rem; border: none;padding: none;">
+					    <!--<span class="input-label">First Name</span>-->
+					    <input type="text" placeholder="请填写详细地址(不少于5个字)">
+					</label>
+				</div>
+			</ion-content>
+		</ion-modal-view>	
+	</script>
+	<!--选择省份-->
+	
+	<script id="myLocation.html" type="text/ng-template" charset="utf-8"  >
+		<ion-modal-view style="background: rgba(0,0,0,0.5)" ng-click="closemyLocations()" ng-controller="myLocationnCrl" >
+			
+			<div style="position: absolute; bottom:0; width: 100%; height: 5rem; background:#fff;" ng-click="$event.stopPropagation()">
+				<div id='divYell'>1111</div>
+			</div>
+		</ion-modal-view>	
+	</script>
+	<!--具体信息模态-->
+	<script id="myIdentity.html" type="text/ng-template" charset="utf-8"   >
+		<ion-modal-view>
+			<ion-header-bar class="bar-dark" >
+				<P  ng-click="closemyIdentity()" class="button button-clear" style="white-space: pre;" >    <      身份信息管理</P>
+				<h1 class="title" ></h1>
+				<a class="button button-clear ion-ios-plus-empty"  style="color: white; white-space: pre;"  >   </a>
+			</ion-header-bar>
+			<ion-content>
+				<ion-list >
+					<img src="img/five/xinxi.png" style="width: 100%;height: 100%;"/>
+				</ion-list>
+				<ion-list>	
+				</ion-list>
+			</ion-content>
+			
+		</ion-modal-view>	
+	</script>
+	<script type="text/javascript">
+		
+	</script>
+</ion-view>

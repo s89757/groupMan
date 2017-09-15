@@ -1,0 +1,92 @@
+			*{
+				margin: 0;
+				
+				padding: 0;
+			}
+			#swiper-container2{
+				width: 100%;
+				height: 0.8rem;
+				font-size: 0.5rem;
+				text-align: center;
+				margin: none;
+				padding: none;
+				/*z-index: 9999;*/
+				background: black;
+				color: white;
+			}
+			#swiper-container3{
+				/*z-index: 9999;*/
+				width: 100%;
+				/*height: 100%;*/
+				
+				/*background: red;*/
+			}
+			#swiper-container3 div{
+				/*margin-top: 0.5rem;*/
+				/*width: 100%;*/
+				/*height: 100%;*/
+				/*background: red;*/
+				/*font-size: 1rem;*/
+				/*margin-top: 3px;*/
+			}
+			.active-nav{
+				border-bottom: 2px solid white;
+				color: white;
+				
+			}
+
+
+/*--------轮播===========*/
+
+.headerpics{
+	width: 100%;
+	height: 100%;
+}
+
+
+/*==============卡片==============*/
+
+.card_zzc{
+	opacity: 0.9;
+	 width: 100%;
+	 height: 95%;
+	 background: black;
+	  position: absolute;
+}
+
+.oneimg{
+	width: 100%;
+	height: 3rem;
+	opacity: 0.6;
+}
+.oneimgSpan{
+	position: absolute;
+	top: 34%;
+	left: 32%;
+	text-align: center;
+	color: white;
+	font-size: 0.6rem;
+	border-bottom: 0.2px solid white;
+}
+
+
+
+/*=========瀑布流卡片======*/
+.card_Img{
+	width: 100%;
+	height: 5rem;
+}
+
+.card_BT{
+	opacity: 0.4;
+	text-align: center;
+	line-height: 0.6rem;
+	width: 1.5rem;
+	height: 0.6rem;
+	font-size: 0.4rem;
+	position: absolute;
+	top: 1rem;
+	left: 0.5rem;
+	background: black;
+	color: white;
+}

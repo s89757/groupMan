@@ -1,0 +1,73 @@
+<ion-view view-title="Account" hide-nav-bar="true" hide-tabs="true"  style="background: url(img/timg.png) no-repeat; background-size: 100% 100%;opacity: 0.01;">
+	<style type="text/css">
+		.zy_tb{
+			width: 33%;
+			height: 33%;
+			float: left;
+		}
+		.zy_tb_img{
+			width: 60%;
+			text-align: center;
+			height: auto;
+		}
+		
+		
+	</style>		
+			<div style="background: url(img/timg.jpg) no-repeat; background-size: 100% 100%;opacity: 0.5; width: 100%; height: 100%;">
+				<div class="list">
+					<div class="col">
+					  	<a style="width: 100%; height: 1rem;" href="#/tab/homepage">X</a>
+						<div style="width: 100%;height: 2rem;">
+							<img style="width: 2rem; margin: 0 auto;display: block;" src="img/logo.png" />
+						</div>
+						<!--<div style="width: 100%; height: 1rem;"></div>-->
+					</div>
+				</div>	
+				<!--登录信息-->
+					<div class="list" style="opacity: 0.6;">
+						<div class="row">
+							<div class="col col-80 col-offset-10" >
+								<label class="item item-input">
+								    <span class="input-label">账&nbsp;&nbsp;&nbsp;&nbsp;号：</span>
+								    <input type="text" style="margin-right: 10%;" ng-model="zanghao">
+								</label>
+								<label class="item item-input" >
+								    <span class="input-label">密&nbsp;&nbsp;&nbsp;&nbsp;码：</span>
+								    <input type="password" style=""  ng-model="mima">
+								   <!-- <span class="input-label-right"><button>发送验证码</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> -->
+							 	</label>
+							</div>
+						</div>	
+					</div>	
+					<!--登录按钮-->	
+						
+				<div class="list " style="opacity: 1;">
+						<div class="row">	
+							<div class="col col-80 col-offset-10">
+						  		<button class="button button-full button-positive energized-bg" ng-click="denglu()">
+									  登录
+								</button>
+							</div>	
+						</div>
+				</div>	
+				
+				<div style="width: 100%;height: 25%;"></div>
+				<div class="item item-text-wrap" style="color: #000000; background: none; border: none; text-align: center; font-size: 0.3rem;">										
+				    	<span  ><span style="color: gray;text-decoration: line-through;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+				    	<span style="font-weight: 400;">&nbsp;&nbsp;第&nbsp;三&nbsp;方&nbsp;账&nbsp;号&nbsp;直&nbsp;接&nbsp;登&nbsp;录&nbsp;&nbsp;</span>
+				    	<span style="color: gray;text-decoration: line-through;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+				</div>		
+				<!--下标跳转-->
+				<div  style="width: 60%;height: 2rem;margin-left: 25%;">
+					<div  class="zy_tb">
+						<img class="zy_tb_img" src="img/four/ic_login_qq.png" />
+					</div>
+					<div  class="zy_tb">
+						<img class="zy_tb_img" src="img/four/ic_login_sina.png" />
+					</div>
+					<div  class="zy_tb">
+						<img class="zy_tb_img" src="img/four/ic_login_weixin.png" />
+					</div>
+				</div>	
+			</div>
+</ion-view>

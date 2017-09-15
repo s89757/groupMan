@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>loaclStorage</title>
+</head>
+<body>
+<div id="box"></div>
+</body>
+<script type="text/javascript">
+window.onload=function(){
+    var box=document.getElementById("box");
+    if(!localStorage.a){
+        window.localStorage.a = 0;
+    }else{
+        var x = parseInt(localStorage.a);
+        localStorage.a=++x;
+    }
+    box.innerHTML="本网站的访问量为："+localStorage.a;
+    localStorage.s = 4
+    console.log(localStorage.s)
+
+
+
+}
+</script>
+</html>

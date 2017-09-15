@@ -1,0 +1,135 @@
+<ion-view view-title="Account" hide-nav-bar="true"  ><!--hide-tabs="true"  模板底部消失-->
+	
+		<!--头部-->
+		<ion-header-bar class="bar-dark ">
+				<a class="button button-clear">购物袋</a>
+				<h1 class="title"></h1>
+		</ion-header-bar>
+		<!--内容部分-->
+	
+		
+			
+			<ion-content class="has-header" style="background: gainsboro;">
+					<!--如果购物车为空-->
+					<ion-list ng-show="shoppingCart_k">
+						<div style="text-align: center; width: 100%; height: 40%;background: khaki;padding: 1rem 0 0 0; ">
+							<div style="width: 2.5rem; height: 2.5rem;border-radius: 50%;border: 0.04rem solid gray;margin-left: 39%;">
+								<img style="width: 2rem; height: auto;margin-top: 0.5rem; margin-left: 0.25rem;" src="img/logo.png" />
+							</div>
+							<div style="height: 0.5rem;"></div>
+							<p>您的购物袋暂时无物品</p>
+							<div style="height: 0.3rem;"></div>
+							<a class="button" style="width: 60%;height: 10%;background: goldenrod;" href="#/tab/products">随 便 逛 逛</a>
+							<div style="height: 0.5rem;"></div>
+						</div>
+					<!--相关推荐-->
+						<div  style="text-align: center;padding: 0.2rem 0 0 0; ">
+							<span style="color: gray;text-decoration: line-through;white-space: pre;">                            </span>
+					    	<span style="font-size: 0.4rem; font-weight: 400;white-space: pre;">  相 关 推 荐  </span>
+					    	<span style="color: gray;text-decoration: line-through;white-space: pre;">                            </span>
+						</div> 
+						
+					<!--相关推荐列表-->	
+							<ion-scroll direction="x" scrollbar-x="false"> 
+										<div class="row"  style="width: 40rem; height: 8rem;">
+											<div class="col-20">
+												<h4>红尘烟火</h4>
+												<img src="img/four/gediao (4).jpg"  style="width: 6.8rem;height: 6.8rem;"/>
+											</div>
+											<div class="col-20">
+												<h4>情调生活</h4>
+												<img src="img/one/shenghuo (5).jpg"  style="width: 6.8rem;height: 6.8rem;"/>
+											</div>
+											<div class="col-20">
+												<h4>大海</h4>
+												<img src="img/one/shenghuo (7).jpg"  style="width: 6.8rem;height: 6.8rem;"/>
+											</div>
+											<div class="col-20">
+												<h4>创意格调</h4>
+												<img src="img/one/shenghuo (9).jpg"  style="width: 6.8rem;height: 6.8rem;"/>
+											</div>
+											<div class="col-20">
+												<h4>尽情享受</h4>
+												<img src="img/one/shenghuo (1).jpg"  style="width: 6.8rem;height: 6.8rem;"/>
+											</div>
+										</div>
+							</ion-scroll>
+						</ion-list>	
+						<!--<div class="row" style="width: 40rem; height: 10rem;">
+									<div class="col col-20 " style="background: white;margin: 0.3rem;" ng-repeat="row in xgtjLists">
+										<h4>{{row.Cname}}</h4>
+										<hr />
+										<div class="row row-wrap">
+						    				<div class="col col-50 tj_wrap" ng-repeat="col in row.Cpic">
+						    						<div class="tj_img">
+						    							<img src="{{col}}"/>
+						    						</div>
+						    				</div>
+				    					</div>
+									</div>
+								</div>-->
+					
+					
+						
+		<!--================购物袋不为空===================-->
+						
+						<ion-list ng-show="shoppingCart_y" style="background: white;width: 100rem;position: relative;">
+							<!--<div style="height: 20rem;width: 100%;"  style="padding: 0;margin: 0;">-->
+								<ion-item ng-repeat="shapplis in goodsChecked" style="padding: 0.2rem; border: 0.1rem 0 0.1rem 0;">
+									<div class="row" id="yixuanshangpin"   style="margin-right: 1.5rem; box-sizing: border-box;background: white;padding: 0;margin: 0;" >
+										<div class="col-15" style="line-height: 4rem;">
+											<label class="checkbox"><input type="checkbox"  ng-checked="shapplis.checked" ng-click="toggleChecked(shapplis)"></label>
+										</div>
+										<div class="col col-25" id="yixuanshangpin_tp">
+											<img src="{{shapplis.Tpicture}}"  style="width: 100%; height: 100%;"/>
+										</div>
+										<div class="col col-60">
+											<h3>{{shapplis.Tdescribe}}</h3>
+											<h6 style="white-space:pre;">             </h6>
+											<p>{{shapplis.Tname}}</p>
+											<h5 style="white-space:pre;">             </h5>
+											<div id="yixuanshangpin_btn">
+												<button class="button button-small btn_jian" ng-disabled="shapplis.isDisabled"  ng-click="decreaseCount(shapplis)"><i class="icon ion-ios-minus-empty"></i></button>
+								                <input type="text" class="btn_zhong" ng-model="shapplis.count" style="width: 0.9rem; height: 0.9rem;">
+								                <button class="button button-small btn_jia" ng-click="addCount(shapplis)"><i class="icon ion-ios-plus-empty"></i></button>
+											</div>
+											<div style="float: right; line-height: 1rem;">￥{{shapplis.Tnowadays*shapplis.count}}</div>
+										</div>
+										<ion-option-button class="button-calm" ng-click="removes(shapplis)"  style="line-height: 3.5rem;">删除</ion-option-button>	
+											
+									</div> 
+								</ion-item>
+								<div style="width: 100%; height: 0.2rem;"></div>
+								
+							<!--</div>-->
+							
+						</ion-list>
+						<div style="width: 100%; height: 1.15rem;"></div>
+			</ion-content>		
+		<ion-list ng-show="shoppingCart_yJS">
+			<div class="has-footer" style="z-index: 9;position: fixed;bottom: 1.2rem;width: 100%;background: white; display: inline-block;">
+				<!--<ion-checkbox ng-model="isChecked">
+					<p>全选</p>
+				</ion-checkbox>-->
+					
+				<label class="checkbox"><input type="checkbox"  ng-checked="selcetAll" ng-click="checkAll()"></label>	
+				<!--<button class="button account-btn" style="float: right;background: skyblue;border-radius: none;">结算</button></div>-->
+			    <div class="account-wrap" style="float: right; display: block; overflow: hidden;">
+		          <div class="account-label" style="float: left;">
+		            <h5 style="white-space:pre;">总计：<em>￥{{totalValue }}</em>          </h5>
+		          </div>
+		          <div class="checkout" style="float: right;">
+		            <button class="button account-btn" style="background: skyblue;" >去结算</button></div>
+		        </div>
+				
+			</div>
+		</ion-list>
+	
+	
+	
+	
+		
+			
+			
+			
+</ion-view>

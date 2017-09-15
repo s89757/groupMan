@@ -1,0 +1,165 @@
+<ion-view hide-nav-bar="true">
+  		<ion-header-bar class="bar-dark">
+							<a class="button button-clear">精选</a>
+							<h1 class="title"></h1>
+							
+			</ion-header-bar>
+			
+			<style type="text/css">
+				
+			</style>
+						<ion-content style="background: gainsboro;" >
+							
+				<!--=====除去标题后的顶部轮播=======-->                                                                                         
+									<ion-slide-box   does-continue="true" auto-play="true" slide-interval="1000" >
+											<ion-slide ng-repeat="courseLi in courseLists">
+												<img class="tagSlide"  src="{{courseLi.Cpic}}"  />
+											</ion-slide>
+											
+									</ion-slide-box>
+									
+					<!--==========卡--片======-->
+									<div class="item item-text-wrap" style="text-align: center;">
+										
+									    	<span  ><span style="color: gray;text-decoration: line-through;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+									    	<span style="font-size: 0.5rem; font-weight: 600;">&nbsp;&nbsp;人&nbsp;气&nbsp;热&nbsp;门&nbsp;精&nbsp;选&nbsp;&nbsp;</span>
+									    	<span style="color: gray;text-decoration: line-through;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></span>
+								
+									
+									</div>    	
+									    	<!--<hr />-->
+									<div class="item  item-text-wrap" style="text-align: center;padding: 0.1rem 0 0.2rem 0; margin: 0;" >    	
+								    	<div class="row" >
+								    		<div class="col col-1"></div>
+								    		<div class="col col-20">
+								    			<div class="imgcard">
+								    				<img src="img/图标/u=2300359503,3071095944&fm=26&gp=0.jpg" />
+								    				<h5>现货精选</h5>
+								    			</div>
+								    		</div>
+								    		<div class="col col-6"></div>
+								    		<div class="col col-20">
+								    			<div class="imgcard">
+								    				<img  src="img/图标/u=3114505459,2608179332&fm=26&gp=0.jpg"  />
+								    				<h5>人气搭配</h5>
+								    			</div>
+								    		</div>
+								    		<div class="col col-6"></div>
+								    		<div class="col col-20">
+								    			<div class="imgcard">
+								    				<img src="img/图标/u=1010903552,2175387871&fm=26&gp=0.jpg" />
+								    				<h5>过草原创</h5>
+								    			</div>
+								    		</div>
+								    		<div class="col col-6"></div>
+								    		<div class="col col-20">
+								    			<div class="imgcard">
+								    				<img src="img/图标/u=1935462772,1631806974&fm=26&gp=0.jpg" />
+								    				<h5>淘淘特价</h5>
+								    			</div>
+								    		</div>
+								    		<div class="col col-1"></div>
+								    	</div>
+								  	</div> 
+								  	
+			<!--======限时抢购=====-->		
+								<div class="item item-text-wrap" style="padding: 0; margin: 0.1rem 0 0 0; text-align: center;">
+										<div id="countDown">
+											<div class="countDown" id="count_shi"></div>
+											<span style="font-size: 0.6rem;padding: 0 0.1rem 0 0 ;">:</span><div class="countDown" id="count_fen"></div>
+											<span style="font-size: 0.6rem;padding: 0 0.1rem 0 0 ;">:</span><div class="countDown" id="count_miao"></div>
+										</div>
+										<span><span style="text-decoration: line-through;color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+										<span style="font-size: 0.5rem; font-weight: 600;">&nbsp;&nbsp;限&nbsp;时&nbsp;好&nbsp;价&nbsp;&nbsp;</span>
+										<span style="color: gray;text-decoration: line-through;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+										<br />
+										<span style="text-align: center; color: gray; font-size: 0.3rem;">HOT&nbsp;&nbsp;SALE</span>
+								</div>	
+								
+							
+								
+			<!--======七夕精选======-->
+						<div style="margin: 0.1rem 0 0 0; ">
+							<div style="width: 100%; height: 2rem;">
+								<img style="width: 100%; height: 2rem;" src="img/超级截屏_20170821_191633.png" />
+							</div>
+							<div class=" tanabata" >
+								<div  ng-repeat="tanabataLi in tanabataLists">
+									<img  src="{{tanabataLi.Cpic}}" />
+								</div>
+								
+							</div>
+							
+						</div>	
+							
+			<!--====本周优惠精选====-->	
+								
+					<div class="item item-text-wrap" style="padding: 0; margin: 0.6rem 0 0 0; text-align: center;width: 100%;">
+								<span style="text-decoration: line-through;color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+								<span  style="font-size: 0.5rem; font-weight: 600;">&nbsp;&nbsp;本&nbsp;周&nbsp;优&nbsp;惠&nbsp;精&nbsp;选&nbsp;&nbsp;</span>
+								<span style="color: gray;text-decoration: line-through;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							<br />
+							<span  style="text-align: center; color: gray; font-size: 0.3rem;">WEEK'S&nbsp;&nbsp;OFFER</span>
+							<div class="choicenesslis" >
+								<img  src="img/超级截屏_20170821_191655.png">
+							</div>
+							<div class="choicenesslis" >
+								<img  src="img/超级截屏_20170821_191711.png">
+							</div>
+							<div class="row" style="width: 100%;height: 2.8rem;">
+								<div class="col col-50">
+									<img style="width: 100%;height: 2.4rem;" src="img/超级截屏_20170821_191733.png">
+								</div>
+								<div class="col col-50">
+									<img style="width: 100%;height: 2.4rem;" src="img/超级截屏_20170821_191804.png">
+								</div>
+							</div>
+					</div>
+			<!--====专题精选======-->			
+						<div class="item item-text-wrap"  style="padding: 0; margin: 0.06rem 0 0 0; text-align: center;width: 100%;">
+							<span style="text-decoration: line-through;color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							<span  style="font-size: 0.5rem; font-weight: 600;">&nbsp;&nbsp;专&nbsp;题&nbsp;精&nbsp;选&nbsp;&nbsp;</span>
+							<span style="color: gray;text-decoration: line-through;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+							<br />
+							<span  style="text-align: center; color: gray; font-size: 0.3rem;">FEATURED&nbsp;&nbsp;TOPICS</span>
+							<div class="speciallis">
+								<img  src="img/超级截屏_20170823_185219.png">
+							</div>
+							<div class="speciallis">
+								<img  src="img/超级截屏_20170823_185253.png">
+							</div>
+							<div class="speciallis">
+								<img  src="img/超级截屏_20170823_185318.png">
+							</div>
+							<div class="speciallis">
+								<img  src="img/超级截屏_20170823_185342.png">
+							</div>
+						</div>
+			<!--  ==========潮流精选-================-->
+			<div class="item item-text-wrap" style="padding: 0; margin: 0.3rem 0 0 0; text-align: center;width: 100%;">
+					<span style="text-decoration: line-through;color: gray;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<span  style="font-size: 0.5rem; font-weight: 600;">&nbsp;&nbsp;潮&nbsp;流&nbsp;精&nbsp;选&nbsp;&nbsp;</span>
+					<span style="color: gray;text-decoration: line-through;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+					<br />
+					<span  style="text-align: center; color: gray; font-size: 0.3rem;">BEST&nbsp;&nbsp;BUYI</span>
+			</div>
+			<div class="item text-center" style="background: none; font-size: 12px;">E&nbsp;N&nbsp;D</div>
+						</ion-content>
+</ion-view>
+
+
+
+
+
+
+
+
+<!--<script type="text/javascript">
+	window.onload=function(){
+			
+			
+			
+			
+			
+		}
+</script>-->

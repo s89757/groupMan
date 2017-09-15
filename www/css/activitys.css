@@ -1,0 +1,66 @@
+/*轮播*/
+				.tagSlide{
+					width: 100%;
+					height: 5rem;
+				}
+				
+	/*===============卡片======================*/
+				.imgcard{
+					width: 100%;
+					height: 1.5rem;
+					
+				}
+				.imgcard img{
+					width: 100%;
+					height: 1.5rem;
+					
+				}
+	/*==================倒计时================*/
+				.countDown{
+					width: 0.5rem;
+					height: 0.5rem;
+					background: black;
+					color: white;
+					display: inline-block;
+					font-size: 0.4rem;
+				}
+				#countDown{
+					
+					padding: 0 0 0.3rem 0;
+					/*line-height: 150%;*/
+				}
+				
+		/*====================七夕精选======================*/
+				.tanabata{
+					width: 100%; height: 5rem;
+				}
+				.tanabata div{
+					/*float: left;*/
+					display: inline-block;
+					width: 33.33%; height: 2.6rem; float: left;border: 0.001px solid gainsboro;
+				}
+				.tanabata>div>img{
+					width: 100%;height: 2.6rem;
+				}
+				
+
+         /*============= 优惠精选=======================*/
+		        .choicenesslis{
+		        	width: 100%;
+		        	height: 2.6rem;
+		        	padding: 0.2rem 0 0 0;
+		        }
+		        .choicenesslis>img{
+		        	width: 100%;
+		        	height: 2.4rem;
+		        }
+        /*=================专题精选===================*/
+					.speciallis{
+						width: 100%;
+						height: 8rem;
+						padding: 0.6rem 0 0 0;
+					}
+					.speciallis>img{
+						width: 100%;
+						height: 7.6rem;
+					}

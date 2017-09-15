@@ -1,0 +1,233 @@
+<ion-view view-title="Account" hide-nav-bar="true" >
+	 
+	 <!-- -------------头部------------->
+		
+				<div class="bar bar-header bar-dark">
+						<label class="item item-input text-center" style="width: 80%;margin-left: 10%; border-radius: 0.2rem;">
+					    <i class="icon ion-search placeholder-icon"></i>
+					    <input type="text" placeholder="寻找你的质感商品/品牌"  >
+				 		 </label>		
+				</div>
+			<!---------副标题=------------------------>
+			<!--<div ui-view></div>-->
+			<div class="bar bar-subheader">
+				<div class="row text-center ">
+					<div class="col-50" ng-click="classifytab()" style="box-sizing: border-box;text-align: center;border-right:1px solid #ccc; ">
+						<div ng-style="color" style="color: black; width: 1.2rem;height: 0.7rem;border-bottom: 0.1rem solid white;margin-left: 40%;">分类</div>
+					</div>
+					<div class="col-50" ng-click="brandtab()" style="box-sizing: border-box;text-align: center;">
+						<div  ng-style="colorc" style="color: black; width: 1.2rem;height: 0.7rem;border-bottom: 0.1rem solid white;margin-left: 40%;">品牌</div>
+					</div>
+				</div>
+			</div>
+			<!-------------=------内容区---------------->
+			
+				
+				<!--第一页内容-->
+				<ion-list ng-show="classifyThr" >
+						
+						<div class="row" style="padding: 0;">
+							<div class="col col-25" style="padding: 0;">
+								<ion-scroll direction="y" scrollbar-y="false" zooming="true" style="margin-top: 2.7rem; height: 15.2rem; width: 100%;z-index: 999;">
+							    	<div  id="fenlei_Hz">
+											<div  class="  shangyi_Hz" style="width: 100%;height: 3rem;background: white;color: khaki;border: 0.02rem solid white;">
+												<span>上衣&nbsp;&nbsp;<i class="icon ion-arrow-right-b"></i></span>
+											</div>
+											<div class=" kuzi_Hz"  style="width: 100%;height: 3rem;background: gainsboro;color: black;border: 0.02rem solid white;">
+												<span>裤子&nbsp;&nbsp;<i class="icon ion-arrow-right-b"></i></span>
+											</div>
+											<div class=" xiezi_Hz"  style="width: 100%;height: 3rem;background: gainsboro;color: black;border: 0.02rem solid white;">
+												<span>鞋子&nbsp;&nbsp;<i class="icon ion-arrow-right-b"></i></span>
+											</div>
+											<div class=" xiangbao_Hz"  style="width: 100%;height: 3rem;background: gainsboro;color: black;border: 0.02rem solid white;">
+												<span>箱包&nbsp;&nbsp;<i class="icon ion-arrow-right-b"></i></span>
+											</div>
+											<div class=" peishi_Hz"  style="width: 100%;height: 3rem;background: gainsboro;color: black;border: 0.02rem solid white;">
+												<span>配饰&nbsp;&nbsp;<i class="icon ion-arrow-right-b"></i></span>
+											</div >
+											<div class=" peishi_Hz"  style="width: 100%;height: 3rem;background: gainsboro;color: black;border: 0.02rem solid white;">
+												<span>配饰&nbsp;&nbsp;<i class="icon ion-arrow-right-b"></i></span>
+											</div>
+											<div class=" peishi_Hz"  style="width: 100%;height: 3rem;background: gainsboro;color: black;border: 0.02rem solid white;">
+												<span>配饰&nbsp;&nbsp;<i class="icon ion-arrow-right-b"></i></span>
+											</div>
+									</div>	
+								</ion-scroll>
+							</div>
+							<div class="col col-75" style="padding:0.2rem;"  >
+				  <div style="height: 11.2rem; width: 100%;background: white;">
+					<ion-scroll direction="y" scrollbar-y="false"  style="text-align: center; margin-top: 2.7rem; height: 15.2rem; width: 100%;z-index: 999;">
+				    	<div id="fenlei_Nr">      
+				    	      <ion-list ng-show="!shangyi_Nr" >
+									<h4 style="">
+										<span style="white-space:pre;text-decoration:line-through;">      </span>
+										潮男精选
+										<span style="white-space:pre;text-decoration:line-through;">      </span>
+									</h4>
+									<h6>Cool</h6>
+										<div class="shangyi_yi">
+											<div ng-click="shangyiO()">
+												<img src="img/three/shangyiy (1).jpg" style="width: 2.3rem;height: 2.3rem;"/>
+												<p>商务风</p>
+											</div>
+											<div ng-click="shangyiT()">
+												<img src="img/three/shangyiy (2).jpg" style="width: 2.3rem;height: 2.3rem;"/>
+												<p >嘻哈狂</p>
+											</div>
+											<div >
+												<img src="img/three/shangyiy (4).jpg" style="width: 2.3rem;height: 2.3rem;"/>
+												<p>T恤</p>
+											</div>
+											<div >
+												<img src="img/three/shangyiy (3).jpg" style="width: 2.3rem;height: 2.3rem;"/>
+												<p>帅胖胖</p>
+											</div>
+											<div >
+												<img src="img/three/shangyiy (5).jpg" style="width: 2.3rem;height: 2.3rem;"/>
+												<p>情侣档</p>
+											</div>
+											<div >
+												<img src="img/three/shangyiy (6).jpg" style="width: 2.3rem;height: 2.3rem;"/>
+												<p>正装控</p>
+											</div>
+										</div>
+									<h4 >
+										<span style="white-space:pre;text-decoration:line-through;">      </span>
+										全部分类
+										<span style="white-space:pre;text-decoration:line-through;">      </span>
+									</h4>
+									<h6>ALL</h6>
+										<div class="shangyi_yi" ng-repeat="quanbuLis in quanbuLists">
+											<div >
+												<img src="{{quanbuLis.Cpic}}" style="width: 2.3rem;height: 2.3rem;"/>
+												<p>{{quanbuLis.Cdes}}</p>
+											</div>
+										</div>
+								</ion-list>
+								<ion-list ng-show="!kuzi_Nr"  style="display: none;">
+									<h4 >
+										<span style="white-space:pre;text-decoration:line-through;">      </span>
+										全部分类
+										<span style="white-space:pre;text-decoration:line-through;">      </span>
+									</h4>
+									<h6>ALL</h6>
+										<div class="shangyi_yi" ng-repeat="kuziLis in kuziLists">
+											<div >
+												<img src="{{kuziLis.Cpic}}" style="width: 2.3rem;height: 2.3rem;"/>
+												<p>{{kuziLis.Cdes}}</p>
+											</div>
+										</div>
+								</ion-list>
+								<ion-list ng-show="!xiezi_Nr" style="display: none;">
+									<h4 >
+										<span style="white-space:pre;text-decoration:line-through;">      </span>
+										全部分类
+										<span style="white-space:pre;text-decoration:line-through;">      </span>
+									</h4>
+									<h6>ALL</h6>
+										<div class="shangyi_yi" ng-repeat="xieziLis in xieziLists">
+											<div >
+												<img src="{{xieziLis.Cpic}}" style="width: 2.3rem;height: 2.3rem;"/>
+												<p>{{xieziLis.Cdes}}</p>
+											</div>
+										</div>
+								</ion-list>
+								<ion-list ng-show="!xiangbao_Nr" style="display: none;">
+									箱包箱包箱包箱包箱包箱包箱包箱包箱包箱包箱包箱包箱包箱包箱包
+								</ion-list>
+								<ion-list ng-show="!peishi_Nr" style="display: none;">
+									配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰配饰
+								</ion-list>
+								<ion-list ng-show="!peishi_Nr" style="display: none;">
+									配饰
+								</ion-list>
+								<ion-list ng-show="!peishi_Nr" style="display: none;">
+									配饰
+							</ion-list>
+				    	</div> 	
+					 </ion-scroll>
+					</div>
+				</div>
+			</div>
+				</ion-list>
+				
+				
+				<!--第二页内容-->
+				<ion-list ng-show="brandThr"> 
+						
+							<ion-slide-box does-continue="true" auto-play="true" slide-interval="1000" delegate-handle="slideimgs"  style="margin-top: 2.5rem;">
+									<ion-slide ng-repeat="courseListTs in courseListT"  >
+										<img class="thrpic"  src="{{courseListTs.Cpic}}"/>
+									</ion-slide>
+							</ion-slide-box>
+	
+							<ion-scroll direction="x" scrollbar-x="false" > 
+								<div style="width: 24rem; height: 8rem;">
+										<div class="row">
+											<div class="col col-33">
+												<div class="card " style="height: 6rem; position: relative; box-sizing: border-box;border: 0.04rem solid grey;">
+														<div class="row" style="">
+															<div class="col col-50" style="border-right: 0.04rem solid black;">运动</div>
+															<div class="col col-50" style="color: grey;">speat</div>
+														</div>
+														<div class="huadong" >
+															<img class="huadongImg" src="img/u=2899102618,998807498&fm=200&gp=0.jpg" />
+														</div>
+												</div>
+											</div>
+											<div class="col col-33">
+												<div class="card " style="height: 6rem; position: relative; box-sizing: border-box;border: 0.04rem solid grey;">
+														<div class="row" style="">
+															<div class="col col-50" style="border-right: 0.04rem solid black;">运动</div>
+															<div class="col col-50" style="color: grey;">speat</div>
+														</div>
+														<div class="huadong" >
+															<img class="huadongImg" src="img/u=4062474501,2544598228&fm=26&gp=0.jpg" />
+														
+														</div>
+												</div>
+											</div>
+											<div class="col col-33">
+												<div class="card " style="height: 6rem; position: relative; box-sizing: border-box;border: 0.04rem solid grey;">
+														<div class="row" style="">
+															<div class="col col-50" style="border-right: 0.04rem solid black;">运动</div>
+															<div class="col col-50" style="color: grey;">speat</div>
+														</div>
+														<div class="huadong" >
+															<img class="huadongImg" src="img/u=3893544499,2077916716&fm=26&gp=0.jpg" />
+															
+														</div>
+												</div>
+											</div>
+										</div>
+								</div>
+								
+							
+							</ion-scroll>
+						<div class="list">
+							<div class="item" style="padding: 0;margin: 0;">
+								<div class="card">所有品牌</div>
+							    <div class="row" ng-repeat="coursethreeLis in coursethreeLists" style="border: 0.06rem solid gainsboro;">
+							    	
+							    	<div class="col col-20" style="width: 100%; height: 1.5rem;">
+							    		 <img style="width: 100%;height: 1.2rem;" src="{{coursethreeLis.Cpic}}">
+							    	</div>
+							    	<div class="col col-80">
+								      <h2>{{coursethreeLis.Cname}}</h2>
+								      <p>{{coursethreeLis.Cdes}}</p>
+							    	</div>
+							    </div>
+							</div>
+						</div>
+					
+				</ion-list>
+				<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>		
+				
+			
+	<!--<script id="shangyiO.html" type="text/ng-template" charset="utf-8">
+		<ion-header-bar class="bar-dark">
+							<a class="button button-clear" >&nbsp;&nbsp; < &nbsp;&nbsp;&nbsp;&nbsp; 我的订单</a>
+							<h1 class="title"></h1>	
+			</ion-header-bar>
+	</script>		-->
+</ion-view>

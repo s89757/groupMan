@@ -1,0 +1,28 @@
+<ion-view hide-nav-bar="true" hide-tabs="true">
+		<ion-header-bar class="dark-bg">
+				<a class="button button-clear " style="color: white;" href="#/tab/products">&nbsp; <</a>
+				<h1 class="title" >
+					<label class="item item-input text-center" style="width: 98%;height: 1rem; margin-top: 0.12rem; margin-left: 1%; border-radius: 0.1rem;">
+					    <i class="icon ion-search placeholder-icon"></i>
+					    <input type="text" placeholder="寻找你的质感商品/品牌"  >
+			 		 </label>
+				</h1>
+				<a class="button button-clear icon ion-ios-briefcase-outline" style="color: white;" ng-click="huoqushuju()"  href="#/tab/shoppings"></a>
+		</ion-header-bar>
+	 	<ion-content>
+		 		<div style="width: 10.8rem; background: ;" >
+		 			<div style="width: 5.4rem; height: 6.5rem; float: left;border: 0.1px solid gainsboro;position: relative;" ng-repeat="proLists in proList">
+		 				<div style="position: absolute;top: 0.4rem;left: 0.2rem;width: 1.4rem;line-height: 0.5rem;text-align: center;font-size: 0.35rem;background: khaki;">{{proLists.Tdiscount}}</div>
+		 				<div style="width: 5.4rem;height: 4.5rem; text-align: center;">
+		 					<img style="width: 3.2rem;height: 4.5rem;" src="{{proLists.Tpicture}}" />
+		 				</div>
+		 				<div style="width: 5.4rem; height: 2rem; padding: 0 0.5rem 0 0.5rem;">
+		 					<div style="line-height: 0.7rem; overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{{proLists.Tdescribe}}</div>
+		 					<div style="line-height: 0.7rem; overflow: hidden;text-overflow:ellipsis;white-space: nowrap;">{{proLists.Tname}}</div>
+		 					<div style="line-height: 0.6rem;"><span style="white-space:pre; color: darkgoldenrod;">现价：￥{{proLists.Tnowadays}}  </span> <span style="text-decoration:line-through; color: gray;"> {{proLists.Toriginal}}</span></div>
+		 					<button class="button button-cart fr button-small" style="background: gainsboro; width: 0.2rem;height: 0.2rem; position: absolute;right: 0.2rem;bottom:0.2rem ;z-index: 999;" ng-click="addGoods(proLists)"><i class="icon ion-ios-cart-outline"></i></button>
+		 				</div>
+		 			</div>
+		 		</div>
+	 	</ion-content>			
+</ion-view>
